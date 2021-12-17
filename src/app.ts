@@ -3,6 +3,7 @@ import cors from 'cors';
 import morgan from 'morgan';
 import bodyParser from'body-parser';
 import BarRoutes from './routes/bar.route'
+import ChatRoutes from './routes/chat.route'
 import UsuarioRoutes from './routes/usuario.route'
 import ComunidadRoutes from './routes/comunidad.route'
 import PublicacionRoutes from './routes/publicacion.route'
@@ -19,7 +20,8 @@ app.use(bodyParser.json());
 app.use('/bares', BarRoutes);
 app.use('/usuarios', UsuarioRoutes);
 app.use('/comunidades', ComunidadRoutes);
-app.use('/publicaciones', PublicacionRoutes)
+app.use('/publicaciones', PublicacionRoutes);
+app.use('/chat', ChatRoutes);
 
 
 export default app;
